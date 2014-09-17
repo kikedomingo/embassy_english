@@ -1,0 +1,86 @@
+/* MAIN CONTENT
+-------------------------------------------------- */
+.main_content {
+	margin-top: -57.5%;
+}
+
+.inner_page .main_content {
+	margin-top: 18px;
+}
+
+/* FORMS
+------------------------------------------------------*/
+
+.progress-striped .bar { 
+    background-image: url(/images/embassy/embassy/loader.gif);
+    background-position:center;
+    background-repeat:no-repeat;
+    filter: none;
+    background-color:#ffffff;
+    background-size:100%;
+}
+
+.btn_img {
+	white-space:nowrap;
+}
+
+/* MISC FIXES
+------------------------------------------------------*/
+
+/* fix image positioning on these headers */
+.courses h3,
+.locations h3 {
+	position: relative;
+}
+.courses h3 img,
+.locations h3 img {
+	position:absolute;
+	right:0;
+}
+
+/* fix bg image positioning on testimonials */
+.student_testimonial .carousel-inner .item {
+	background-position: 0px bottom;
+}
+.student_testimonial .carousel-inner .item .carousel-caption {
+	font-size:11px;
+	margin: -10px 20px 0px 120px;
+	top: 10px;
+	line-height: 15px;
+}
+
+/* HEADER SEARCH STYLES
+------------------------------------------------------*/
+header .siteSearch fieldset .searchInput {
+	padding-top: 19px;
+}
+
+
+
+
+
+
+
+
+/*  Affix
+------------------*/
+#Declarations.affix-bottom {
+	left:48.95%;
+	bottom:115px;
+}
+
+@media (min-width: 1198px) {
+	
+	/* IE 9 ONLY */
+	/* MAIN CONTENT
+	-------------------------------------------------- */
+	.main_content {
+		margin-top: -40%;
+	}	
+		
+	/* HOMEPAGE STYLES
+	---------------------------------------------- */
+	.homepage_carousel .carousel {
+		top: -227px;
+	}
+}

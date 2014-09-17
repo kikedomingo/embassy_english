@@ -1,0 +1,388 @@
+/* EMBASSY ENGLISH STYLES
+-------------------------------------------------- */
+html {
+	overflow-x:hidden;
+}
+
+
+.main_content {
+	background-image: url(../images/top_nav_bg.png);
+	background-color:inherit;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	position: relative;
+	z-index: 3;
+	margin-top: -20%;
+	padding: 23px;
+	overflow:visible;
+}
+
+
+/* CAROUSEL
+-------------------------------------------------- */
+.homepage_carousel {
+	position: relative;
+	top: -116px;
+	margin-bottom: -14px;
+}
+.homepage_carousel .carousel .carousel-inner {
+}
+
+.homepage_carousel .carousel
+{
+    padding-top: 0px;
+    width: 120%;
+    margin-left: -10%;
+}
+
+.control_wrapper
+{
+    z-index: 4;
+    margin: -120px 0px 45px 0px;
+    padding: 0px;
+}
+
+.carousel-control-arrows
+{
+    height: 38px;
+    width: 38px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.carousel-control-arrows:hover, .carousel-control-arrows:focus
+{
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    outline: none;
+}
+
+.carousel-control-indicators
+{
+    z-index: 5;
+    margin: 15px 0px 0px 0px;
+    list-style: none;
+    height: 30px;
+}
+
+.carousel-control-indicators li
+{
+    display: block;
+    width: 23px;
+    height: 23px;
+    margin-right: 5px;
+    text-indent: -999px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    float: left;
+}
+
+.carousel-control-indicators li:hover
+{
+    cursor: pointer;
+	background-color: #e10e49;
+}
+
+.carousel-control-indicators .active
+{
+    background-color: #e10e49;
+}
+
+.homepage_carousel .carousel .item {
+    height: 901px;
+    padding: 0px;
+}
+
+.homepage_carousel .carousel img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 4px solid #0099D8;
+    min-width: 100%;
+}
+
+.homepage_carousel .carousel .carousel-caption
+{
+    background-color: transparent;
+    text-shadow: 0 1px 1px rgba(0,0,0,.9);
+    position: relative;
+    z-index: 0;
+    margin-right: 8.3%;
+    max-width: 340px;
+    padding: 0 20px;
+    margin-top: 17%;
+    float: right;
+    color: #ffffff;
+}
+
+.homepage_carousel .carousel .carousel-caption.background
+{
+    background-image: url(/images/embassy/embassy/carousel-caption_bg.png);
+    background-image: url(http://staging.uk.embassyenglish.com/images/embassy/embassy/carousel-caption_bg.png);
+    padding: 15px 25px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.homepage_carousel .carousel-caption .large
+{
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 40px;
+}
+
+.homepage_carousel .carousel-caption .medium
+{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.homepage_carousel .carousel-caption .small
+{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.homepage_carousel .carousel-caption .red_btn
+{
+    margin-top: 15px;
+}
+
+
+/* MAIN CONTENT
+-------------------------------------------------- */
+
+
+.main_content
+{
+    background-image: url(/images/embassy/embassy/top_nav_bg.png);
+    background-image: url(http://staging.uk.embassyenglish.com/images/embassy/embassy/top_nav_bg.png);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    z-index: 3;
+    padding-top: 23px;
+}
+
+div.editing
+{
+    margin-top: 0;
+}
+
+
+
+
+/* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+@media (min-width: 1198px)
+{
+	
+	.homepage_carousel {
+		margin-bottom: -414px;
+	}
+	
+	.homepage_carousel .carousel .carousel-caption	{
+		max-width: 420px;
+		margin-top: 18%;
+	}
+	
+}
+
+
+
+@media (max-width: 1198px)
+{
+    .homepage_carousel .carousel {
+        padding-top: 0;
+    }
+	
+	.homepage_carousel {
+		margin-bottom: -250px;
+	}
+
+    .homepage_carousel .carousel .carousel-inner {
+        margin-top: 0px;
+    }	
+
+    .homepage_carousel .carousel .item {
+        height: 614px;
+        border-top: none;
+    }
+	
+	.main_content {
+		margin-top: -15% !important;
+	}
+
+
+}
+
+
+
+@media (max-width: 979px)
+{
+
+    /* CAROUSEL
+	----------------------- */
+	.homepage_carousel {
+		position: inherit;
+		margin-bottom: -150px;
+	}
+	
+    .homepage_carousel .carousel {
+        padding-top: 0px;        
+    }
+
+    .homepage_carousel .carousel .item {
+        height: 551px;
+    }
+	
+	.homepage_carousel .carousel .carousel-caption {
+		max-width: 240px;
+		margin-top: 12%;
+	}	
+		
+	.homepage_carousel .carousel-caption .large {
+		font-size: 20px;
+		line-height: 25px;
+	}
+	
+	.homepage_carousel .carousel-caption .medium {
+		font-size: 15px;
+		line-height: 20px;
+	}
+	
+	.homepage_carousel .carousel-caption .small {
+		font-size: 12px;
+		line-height: 20px;
+	}
+	
+    .homepage_carousel .carousel img {
+        width: auto;
+    }
+    
+    .control_wrapper {
+        margin: -130px 0px 55px 0px;
+    }
+
+    /* MAIN CONTENT
+	-------------------------------------------------- */
+	.main_content {
+		margin-top: -24% !important;
+	}   
+}
+
+
+
+@media (max-width: 767px)
+{
+
+
+    /* CAROUSEL
+	----------------------- */
+
+	.homepage_carousel {
+		margin-bottom: 0px;
+	}
+
+    .homepage_carousel .carousel {
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-top: 0;
+        width:inherit;
+    }
+
+    .homepage_carousel .carousel .item {
+        height: auto;
+    }
+
+    .homepage_carousel .carousel-caption h1 {        
+        font-size: 30px;
+    }
+
+    .homepage_carousel .carousel-caption .lead, .homepage_carousel .carousel-caption .btn {
+        font-size: 18px;
+    }
+
+    
+	.homepage_carousel .carousel .carousel-caption {
+		min-width: 100%;
+		margin-right: 0px;
+		background-color: #32363f;
+		-moz-border-radius-bottomright: 5px;
+		-webkit-border-bottom-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		-moz-border-radius-bottomleft: 5px;
+		-webkit-border-bottom-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		margin-top: 55%;
+		float:left;
+    }
+	
+	.homepage_carousel .carousel .carousel-caption .large, .medium, .small {
+		width: 90%;
+	}
+	
+    .homepage_carousel .carousel .carousel-caption.background
+    {
+        padding: 20px 130px 20px 20px;
+        background-image: none;
+    }
+
+    .control_wrapper
+    {
+        margin: -310px 0px 210px 0px;
+        padding: 10px 10px 10px 20px;
+    }
+
+
+    /* MAIN CONTENT
+	----------------------- */
+    .main_content {
+        margin-top: 0px !important;
+		background-image: none;
+		padding: 0px;    
+    }
+}
+
+
+@media (max-width: 450px)
+{
+    /* CAROUSEL
+    ----------------------- */
+    
+    .homepage_carousel .carousel
+    {
+        padding-top: 0;
+    }
+
+
+    .homepage_carousel .carousel .item
+    {
+        height: auto;
+    }
+	
+	.homepage_carousel .carousel .carousel-caption .large, .medium, .small {
+		width: 85%;
+	}
+
+    .control_wrapper
+    {
+        margin: -25px 0px 25px 0px;
+        padding: 10px 10px 20px 20px;
+        background-color: #32363f;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    .carousel-control-indicators
+    {
+        display: none;
+    }
+
+

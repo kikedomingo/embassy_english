@@ -1,0 +1,415 @@
+/*
+Theme Name: Embassy English 2014 1.1
+Author: Kike Domingo - Creative Services SG
+Author URI: mailto:kdomingo@studygroup.com
+Version: 1.1
+Text Domain: embassyenglish
+Description: v1.1 - Released 11 July 2014
+Status: Live
+
+Changelog:
+
+	v1.1 - Released 11 July 2014
+	002 -	PHP Capabilities for the page Blog Options page (Editors now can edit_theme_options)
+	003 -	PHP Capabilities for widgets, etc (Editors now can edit_theme_options)
+	005 -	CSS Media queries fixes - search
+	007 -	PHP	Added title for each of the archives page
+	009	-	PHP	Remove pages from blog search
+	010 -	CSS	Fixed 1px img inside .card .featured
+	013 -	CSS Back button colour fix
+
+	v1.0 - Released 11 July 2014
+	000 -	First commit
+
+*/
+
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+0.0 - VARS
+2.0 - Typography
+3.0 - Elements
+4.0 - Forms
+5.0 - Navigation
+	5.1 - Links
+	5.2 - Menus
+6.0 - Widgets
+7.0 - Content
+	7.1 - Posts and pages
+	7.2 - Asides
+	7.3 - Comments
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+0.0 - VARS & MIXINS
+--------------------------------------------------------------*/
+@import "embassy_vars";
+@import "bootstrap-2/mixins";
+
+//-------------------------
+// IMPORTING THE MAIN STYLES
+@import "styles";
+
+/*--------------------------------------------------------------
+5.0 Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+5.1 Links
+--------------------------------------------------------------*/
+a {
+	color: $emb-eng;
+}
+a:visited {
+	color: $emb-eng;
+}
+a:hover,
+a:focus,
+a:active {
+	color: $emb-dark;
+	text-decoration: underline;
+}
+
+
+.header_img {
+	margin-top: 20px;
+}
+
+.attachment-single-full {
+	margin-bottom: 20px;
+}
+
+.back-button {
+	border: 2px solid #ebebeb;
+	background: #f2f2f2 !important;
+	padding: 8px 10px 6px 10px;
+	margin: 0px 0px 0px 5px;
+	color: $emb-eng;
+	font-weight: 600;
+	font-size: 13px;
+	transition: all 0.2s ease 0s;
+
+	&:hover {
+		background: #fff !important;
+		color: #0099D8 !important;
+		text-decoration: none;
+		border: 2px solid #0099D8;
+	}
+}
+
+.wpPage {
+	margin-top: 20px;
+}
+
+
+.card {
+	background-color: #fff;
+	border-top: 3px solid $emb-eng;
+	margin-bottom: 20px;
+	padding: 15px 20px 25px 20px;
+
+	body.home &.post, body.archive &.post, body.search &.post {
+		padding: 15px 20px 0px 20px;
+		font-size: 0;
+
+		& p {
+			font-size: 16px;
+		}
+	}
+
+	body.page & {
+		& h1 {
+			margin-top: 5px;
+		}
+	}
+
+	
+
+	body.single &.post a.cat-container-link:hover {
+
+	}
+
+	& .card-header {
+
+		& .cat-container {
+			color: #ffffff;
+			padding: 3px 6px;
+			font-weight: bold;
+			font-size: 14px;
+			background-color: $emb-eng;
+		}
+
+		& .date {
+			color: $emb_light_grey;
+			font-weight: bold;
+			margin-left: 13px;
+			font-size: 14px;
+		}
+
+		& a:hover {text-decoration: none;}
+
+	}
+
+	& h1 {
+		font-size: 23px;
+		line-height: 1.3em;
+		margin-top: 15px;
+		margin-bottom: 10px;
+		color:$emb-dark;
+	}
+
+	body:not(.home) & p:last-child {
+		margin-bottom: 0;
+	}
+
+	& h2 {
+		font-size: 23px;
+		line-height: 1.3em;
+		margin-top: 15px;
+		margin-bottom: 10px;
+
+		& a{
+			color:$emb-dark;
+
+			&:hover, &:focus {
+				color:$emb-eng;
+				text-decoration: none;
+			}
+		}
+	}
+
+
+	/* CONTENTS */
+		& blockquote {
+			border-left: 4px solid $emb-eng;
+		}
+
+	& hr {
+		max-width: 100px;
+		border-top: 3px solid $emb_lighter_grey_dark;
+		border-bottom: transparent;
+		margin-bottom: 15px;
+		margin-top: 5px;
+	} 
+
+
+
+
+	& .featured {
+		margin-right: -20px;
+		margin-top: -15px;
+		display: block;
+
+		& img {
+			display: block;
+			max-width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&.widget {
+		/* MAIN */
+		padding-top: 15px;
+
+		& a:hover {text-decoration: none;}
+
+		& h3 {
+			font-size: 16px;
+			text-transform: uppercase;
+			line-height: 1.5;
+		}
+
+		/* DEFAULT WIDGETS STYLES */
+		& .recentposts {
+			& .cat-container {
+				color: #ffffff;
+				padding: 3px 6px;
+				font-weight: bold;
+				font-size: 11px;
+				background-color: $emb-eng;
+			}
+
+			& .date {
+				color: $emb_light_grey;
+				font-weight: bold;
+				margin-left: 13px;
+				font-size: 12px;
+			}
+
+			& h5 {
+				font-size: 16px;
+				margin-top: 7px;
+
+				& a {
+					color: $emb-dark;
+				}
+			}
+		}
+
+		& #recentcomments {
+			& img {
+				@include border-radius(30px);
+			}
+
+			& .recentcomments {
+				margin-bottom: 0;
+				margin-left: 10px;
+			}
+		}
+
+		& .tagcloud {
+			& ul {
+				margin: 0;
+				padding: 0;
+
+				& li {
+					display: inline-block;
+					background-color: $emb-dark;
+					margin-right:3px;
+					margin-bottom: 5px;
+
+					& a {
+						color: #fff;
+						display: block;
+						padding:2px 10px;
+
+						&:hover, &:focus {
+							text-decoration:none;
+						}
+					}
+
+					&:hover, &:focus {
+						background-color: $emb_light_grey;
+					}
+				}
+			}
+		} /* end tagcloud */
+	}	/* end widget */
+
+	&.taxonomy_title {
+		padding-bottom: 15px;
+		border-top: 0px;
+
+		& h2 {
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+	}
+
+
+} /* end card */
+
+/* GLOBAL COLOUR CATEGORIES */
+.category-embassy-english {
+	border-top-color: $emb-eng !important;
+	& .cat-container {
+		background-color: $emb-eng !important;
+	}
+
+	& h2 a:hover, & h2 a:focus, & h5 a:hover, & h5 a:focus {
+		color: $emb-eng !important;
+	}
+}
+
+.category-embassy-summer {
+	border-top-color: $emb-sum !important;
+	& .cat-container {
+		background-color: $emb-sum !important;
+	}
+
+	& h2 a:hover, & h2 a:focus, & h5 a:hover, & h5 a:focus {
+		color: $emb-sum !important;
+	}
+}
+
+.category-embassy-academy {
+	border-top-color: $emb-aca !important;
+	& .cat-container {
+		background-color: $emb-aca !important;
+	}
+
+	& h2 a:hover, & h2 a:focus, & h5 a:hover, & h5 a:focus {
+		color: $emb-aca !important;
+	}
+}
+
+
+.full-overlay {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba(35,39,48,0.6);
+	z-index: 15;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+ 
+
+
+/* 3D rolling links, idea from http://hakim.se/thoughts/rolling-links */
+a.rotate {
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+}
+
+a.rotate span {
+	position: relative;
+	display: inline-block;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+a.rotate span::before {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $emb_light_grey;
+	content: attr(data-hover);
+	-webkit-transition: background 0.3s;
+	-moz-transition: background 0.3s;
+	transition: background 0.3s;
+	-webkit-transform: rotateX(-90deg);
+	-moz-transform: rotateX(-90deg);
+	transform: rotateX(-90deg);
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	padding-left: 15px;
+	padding-top: 2px;
+}
+
+a.rotate:hover span,
+a.rotate:focus span {
+	-webkit-transform: rotateX(90deg) translateY(-22px);
+	-moz-transform: rotateX(90deg) translateY(-22px);
+	transform: rotateX(90deg) translateY(-22px);
+}
+
+a.rotate:hover span::before,
+a.rotate:focus span::before {
+	background: $emb-dark;	
+}
+
+
+// IMPORTING THE EMBASSY STYLES
+@import "embassy_global_styles";
+
+
+
+
+ 
